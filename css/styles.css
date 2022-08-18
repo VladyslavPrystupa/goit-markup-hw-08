@@ -63,6 +63,10 @@ ul {
     text-decoration: none;
 }
 
+.header-link.current{
+    color: var(--nav-text-color);
+}
+
 .header-list .header-link:hover,
 .header-list .header-link:focus{
     color: var(--nav-text-color);
@@ -154,16 +158,13 @@ ul {
     line-height: 1.4;
     letter-spacing: 0.06em;
 
+    text-transform: uppercase;
+
 }
 
 .main-btn {
     color: #FFFFFF;
     background: #2196F3;
-
-    width: 216px;
-    height: 50px;
-    left: 692px;
-    top: 430px;
 
     font-family: inherit;
     font-weight: 700;
@@ -232,7 +233,6 @@ ul {
 .team {
     background-color: #F5F4FA;
 
-    --team-font-size: 16px;
     --team-line-height: 1.2;
     --team-spacing: 0.03em;
     --team-subtitle-weight: 500;
@@ -268,7 +268,6 @@ ul {
 
 .team-text{
 
-    font-size: var(--team-font-size);
     line-height: var(--team-line-height);
     letter-spacing: var(--team-spacing);
 }
@@ -298,11 +297,6 @@ ul {
     line-height: 1.6;
     letter-spacing: 0.03em; 
 
-    width: 125px;
-    height: 38px;
-    left: 593px;
-    top: 174px;
-
     cursor: pointer;
 }
 
@@ -322,7 +316,7 @@ ul {
 }
 
 .portfolio-text{
-    font-size: 16px;
+    
     line-height: 1.9;
     letter-spacing: 0.03em;
 }
