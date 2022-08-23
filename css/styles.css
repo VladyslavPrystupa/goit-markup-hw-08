@@ -14,15 +14,28 @@ body {
     
 }
 
-/* a{
-    text-decoration: none;
-    color: var(--title-text-color);
-    
-}
 
-ul {
-    list-style: none;
-} */
+
+/* container */
+.container{
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+
+    outline: 1px solid red;
+   
+} 
+
+.list-none{
+ margin: 0;
+ padding: 0;
+}
+ 
+h1,h2,h3,h4,h5,h6,p{
+    margin-top: 0;
+    margin-bottom: 0;
+
+}
 
 
 /* header */
@@ -32,6 +45,12 @@ ul {
     --header-font-weight: 500;
     --header-line-height: 1.14;
     --header-spacing: 0.02em;
+   
+    padding-top: 25px;
+    padding-bottom: 25px;
+    
+    
+        
 }
 
 .header-logo {
@@ -42,14 +61,27 @@ ul {
     line-height: 1.2;
 
     text-decoration: none;
+
+
 }
 
 .header-accent {
     color: #2196F3;
 }
 
+.header > .container{
+    
+}
+
+.heder-nav{
+    
+
+}
+
 .header-list{
     list-style: none;
+
+    
 }
 
 .header-list .header-link {
@@ -75,6 +107,8 @@ ul {
 
 .header-contacts{
     list-style: none;
+    
+        
 }
 
 .header-contacts .contacts-link {
@@ -98,9 +132,12 @@ ul {
 /* footer */
 .footer {
     background-color: #2F303A;
+    padding-top:  60px;
+    padding-bottom: 60px;
 }
 
 .footer-logo {
+    display: inline-block;
     color: #FFFFFF;
 
     font-family: 'Raleway', sans-serif;
@@ -108,6 +145,7 @@ ul {
     line-height: 1.2;
 
     text-decoration: none;
+    margin-bottom: 20px;
 }
 
 .footer-accent {
@@ -122,7 +160,6 @@ ul {
 .footer-link {
     color: #FFFFFF;
 
-
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -133,6 +170,7 @@ ul {
 }
 
 .footer-adress {
+    
     color: var(--footer-text-color);
 
     font-style: normal;
@@ -141,31 +179,40 @@ ul {
     line-height: 1.7;
 
     text-decoration: none;
+
+    margin-bottom: 60px;
 }
 
 /* main */
 
 .main {
     background-color: #2F303A;
+    padding-top: 200px;
+    padding-bottom: 200px;
+
+    text-align: center;
+    
 }
 
 .main-title {
-    
     color: #FFFFFF;
 
     font-weight: 900;
     font-size: 44px;
     line-height: 1.4;
     letter-spacing: 0.06em;
-
     text-transform: uppercase;
+
+    padding-bottom: 30px;
+    margin: 0 auto;
 
 }
 
 .main-btn {
+    display: inline-block;
     color: #FFFFFF;
     background: #2196F3;
-
+    
     font-family: inherit;
     font-weight: 700;
     font-size: 16px;
@@ -173,6 +220,14 @@ ul {
     letter-spacing: 0.06em;
 
     cursor: pointer;
+
+    border: 1px solid transparent;
+    border-radius: 4px;
+    min-width: 216px;
+    height: 50px;
+    left: 692px;
+    top: 430px;
+
 }
 
 .main-btn:hover,
@@ -187,15 +242,20 @@ ul {
     --featres-spacing: 0.03em;
     --features-subtitle-height: 1.14;
     --features-text-height: 1.7;
+    padding-top: 94px;
+    padding-bottom: 94px;
+    
 }
 
-
 .features-title {
- visibility: hidden;
+ display: none;
 }
 
 .features-list{
     list-style: none;
+
+    display: flex;
+    justify-content: space-between;
 }
 
 .features-subtitle {
@@ -204,6 +264,8 @@ ul {
     font-size: var(--features-font-size);
     line-height: var(--features-subtitle-height);
     letter-spacing: var(--featres-spacing);
+
+    padding-bottom: 10px;
 }
 
 .features-text {
@@ -211,12 +273,21 @@ ul {
     font-size: var(--features-font-size);
     line-height: var(--features-text-height);
     letter-spacing: var(--featres-spacing);
+
+    width: 270px;
+    
 }
 
 /* service */
+.service{
+    padding-bottom: 110px;
+   
+}
 
 .service-list{
     list-style: none;
+    display: flex;
+    justify-content: space-between;
 }
 
 .service-title {
@@ -226,6 +297,8 @@ ul {
     line-height: 1.2;
     letter-spacing: 0.03em;
 
+    text-align: center;
+    padding-bottom: 50px;
 }
 
 /* team */
@@ -236,16 +309,25 @@ ul {
     --team-line-height: 1.2;
     --team-spacing: 0.03em;
     --team-subtitle-weight: 500;
+
+    padding: 94px 0;
+
+    text-align: center;
 }
 
 .team-list{
     list-style: none;
+
+    display: flex;
+    justify-content: space-between;
+
 }
 
 .team-card{
     background-color: #FFFFFF;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
 }
-
 
 .team-title {
     color: var(--title-text-color);
@@ -254,6 +336,7 @@ ul {
     line-height: 1.2;
     letter-spacing: 0.03em;
 
+    padding-bottom: 50px;
 }
 
 .team-subtitle {
@@ -263,6 +346,10 @@ ul {
     font-size: var(--team-font-size);
     line-height:var(--team-line-height);
     letter-spacing: var(--team-spacing);
+
+    margin-top: 30px;
+    margin-bottom: 10px;
+
 }
 
 
@@ -270,6 +357,8 @@ ul {
 
     line-height: var(--team-line-height);
     letter-spacing: var(--team-spacing);
+
+    padding-bottom: 30px;
 }
 
 /* portfolio main */
