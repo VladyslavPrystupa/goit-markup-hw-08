@@ -19,8 +19,10 @@ body {
 /* container */
 .container{
     width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
+   margin-left: auto;
+   margin-right: auto;
+   padding-right: 15px;
+   padding-left: 15px;
 
     outline: 1px solid red;
    
@@ -53,6 +55,11 @@ h1,h2,h3,h4,h5,h6,p{
         
 }
 
+.header>.container{
+    display: flex;
+    align-items: center;
+}
+
 .header-logo {
     color: var(--title-text-color);
     font-family: 'Raleway', sans-serif;
@@ -62,6 +69,7 @@ h1,h2,h3,h4,h5,h6,p{
 
     text-decoration: none;
 
+    margin-right: 92px;
 
 }
 
@@ -69,19 +77,23 @@ h1,h2,h3,h4,h5,h6,p{
     color: #2196F3;
 }
 
-.header > .container{
-    
-}
-
 .heder-nav{
-    
-
+    margin-right: 344px;
 }
 
 .header-list{
     list-style: none;
-
+    display: flex;
     
+}
+
+.header-list .item, .header-contacts .item{
+    margin-right: 50px;
+    
+}
+
+.header-list .item:last-child, .header-contacts .item:last-child {
+    margin-right: 0;
 }
 
 .header-list .header-link {
@@ -107,9 +119,10 @@ h1,h2,h3,h4,h5,h6,p{
 
 .header-contacts{
     list-style: none;
-    
+    display: flex;
         
 }
+
 
 .header-contacts .contacts-link {
     color: inherit;
@@ -155,6 +168,14 @@ h1,h2,h3,h4,h5,h6,p{
 .footer-list {
     list-style: none;
 
+}
+
+.footer-list .item {
+    margin-bottom: 9px;
+}
+
+.footer-list .item:last-child{
+    margin-bottom: 0;
 }
 
 .footer-link {
@@ -205,6 +226,9 @@ h1,h2,h3,h4,h5,h6,p{
 
     padding-bottom: 30px;
     margin: 0 auto;
+
+    display: block;
+    width: 670px;
 
 }
 
@@ -290,6 +314,18 @@ h1,h2,h3,h4,h5,h6,p{
     justify-content: space-between;
 }
 
+/* .service-list .item{
+    margin-right: 30px;
+}
+
+.service-list .item:last-child{
+    margin-right: 0 ;
+} */
+
+.service-img{
+    display: block;
+}
+
 .service-title {
     color: var(--title-text-color);
 
@@ -329,6 +365,11 @@ h1,h2,h3,h4,h5,h6,p{
     border-bottom-right-radius: 4px;
 }
 
+.team-img{
+    display: block;
+    margin-bottom: 30px;
+}
+
 .team-title {
     color: var(--title-text-color);
 
@@ -347,7 +388,6 @@ h1,h2,h3,h4,h5,h6,p{
     line-height:var(--team-line-height);
     letter-spacing: var(--team-spacing);
 
-    margin-top: 30px;
     margin-bottom: 10px;
 
 }
@@ -410,7 +450,9 @@ h1,h2,h3,h4,h5,h6,p{
     letter-spacing: 0.03em;
 }
 
-
+.portfolio-img{
+    display: block;
+}
 
 
 
