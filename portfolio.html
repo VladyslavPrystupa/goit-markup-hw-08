@@ -29,12 +29,10 @@
         <nav class="heder-nav">
           <ul class="header-list list-none">
             <li class="item">
-              <a class="header-link" href="./index.html">Студія </a>
+              <a class="header-link current" href="./index.html">Студія </a>
             </li>
             <li class="item">
-              <a class="header-link current" href="./portfolio.html"
-                >Портфоліо</a
-              >
+              <a class="header-link" href="./portfolio.html">Портфоліо</a>
             </li>
             <li class="item"><a class="header-link" href="">Контакти</a></li>
           </ul>
@@ -42,13 +40,19 @@
 
         <ul class="header-contacts list-none">
           <li class="item">
-            <a class="contacts-link" href="mailto:info@devstudio.com"
-              >info@devstudio.com</a
-            >
+            <a class="contacts-link" href="mailto:info@devstudio.com">
+              <svg class="contacts-icon" width="16px" height="12px">
+                <use href="./images/icons.svg#envelope"></use>
+              </svg>
+              info@devstudio.com
+            </a>
           </li>
           <li class="item">
-            <a class="contacts-link" href="tel:+380961111111"
-              >+38 096 111 11 11</a
+            <a class="contacts-link" href="tel:+380961111111">
+              <svg class="contacts-icon" width="10px" height="16px">
+                <use href="./images/icons.svg#smartphone"></use>
+              </svg>
+              +38 096 111 11 11</a
             >
           </li>
         </ul>
@@ -215,33 +219,108 @@
     </main>
 
     <footer class="footer">
-      <div class="container">
-        <a class="footer-logo" href="./index.html">
-          <span lang="en"> <span class="footer-accent">Web</span>Studio </span>
-        </a>
-        <address>
-          <ul class="footer-list list-none">
+      <div class="footer container">
+        <div class="footer-nav">
+          <a class="footer-logo" href="./index.html">
+            <span lang="en">
+              <span class="footer-accent">Web</span>Studio
+            </span>
+          </a>
+          <address class="footer-address">
+            <ul class="footer-list list-none">
+              <li class="item">
+                <a
+                  class="footer-link"
+                  href="https://goo.gl/maps/LprtmbSoQCrokkiRA"
+                  target="_blank"
+                  rel="noopener nofollow noreffer"
+                  >м. Київ, пр-т Лесі Українки, 26</a
+                >
+              </li>
+              <li class="item">
+                <a class="footer-adress" href="mailto:info@devstudio.com"
+                  >info@devstudio.com</a
+                >
+              </li>
+              <li class="item">
+                <a class="footer-adress" href="tel:+380961111111"
+                  >+38 096 111 11 11</a
+                >
+              </li>
+            </ul>
+          </address>
+        </div>
+
+        <div class="foote-links">
+          <ul class="footer-list-link list-none">
+            <li class="item"><h2 class="list-title">Приєднуйтесь</h2></li>
+
             <li class="item">
-              <a
-                class="footer-link"
-                href="https://goo.gl/maps/LprtmbSoQCrokkiRA"
-                target="_blank"
-                rel="noopener nofollow noreffer"
-                >м. Київ, пр-т Лесі Українки, 26</a
-              >
-            </li>
-            <li class="item">
-              <a class="footer-adress" href="mailto:info@devstudio.com"
-                >info@devstudio.com</a
-              >
-            </li>
-            <li class="item">
-              <a class="footer-adress" href="tel:+380961111111"
-                >+38 096 111 11 11</a
-              >
+              <ul class="footer-list-icon list-none">
+                <li class="foter-icon-item">
+                  <a
+                    class="foot-link"
+                    href="https://www.instagram.com/"
+                    target="_blank"
+                    rel="noopener nofollow noreffer"
+                    ><svg class="footer-icon">
+                      <use
+                        href="./images/icons.svg#instagram"
+                        width="20"
+                        height="20"
+                      ></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="footer-icon-item">
+                  <a
+                    class="foot-link"
+                    href="https://twitter.com/"
+                    target="_blank"
+                    rel="noopener nofollow noreffer"
+                    ><svg class="footer-icon">
+                      <use
+                        href="./images/icons.svg#twitter"
+                        width="20"
+                        height="20"
+                      ></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="footer-icon-item">
+                  <a
+                    class="foot-link"
+                    href="https://facebook.com/"
+                    target="_blank"
+                    rel="noopener nofollow noreffer"
+                    ><svg class="footer-icon">
+                      <use
+                        href="./images/icons.svg#facebook"
+                        width="20"
+                        height="20"
+                      ></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="footer-icon-item">
+                  <a
+                    class="foot-link"
+                    href="https://www.linkedin.com/"
+                    target="_blank"
+                    rel="noopener nofollow noreffer"
+                    ><svg class="footer-icon">
+                      <use
+                        href="./images/icons.svg#linkedin"
+                        width="20"
+                        height="20"
+                      ></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
             </li>
           </ul>
-        </address>
+        </div>
       </div>
     </footer>
   </body>
