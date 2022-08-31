@@ -64,8 +64,8 @@ ul{
         
 }
 
-
 /* header */
+
 .container.head{
     display: flex;
     align-items: center;
@@ -107,7 +107,6 @@ ul{
     gap: 50px;
 }
 
-
 .header-list .header-link {
     color: var(--title-text-color);
 
@@ -138,7 +137,6 @@ ul{
     margin-left: auto;
     gap: 50px;
 }
-
 
 .contacts-link{
     display: flex;
@@ -335,10 +333,53 @@ ul{
 
 }
 
-.main-btn:hover,
+.main-btn:hover, 
 .main-btn:focus{
     background: #188CE8;
 }
+
+/* main modal */
+.backdrop{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+}
+
+.backdrop.is-hidden{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 528px;
+    height: 581px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+
+}
+
+.modal-btn{
+    position: absolute;
+    right: 8px;
+    top: 8px;
+
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+
 
 /* features */
 .features{
@@ -398,8 +439,6 @@ ul{
     line-height: var(--features-text-height);
     letter-spacing: var(--featres-spacing);
 
-   
-    
 }
 
 /* service */
@@ -526,7 +565,6 @@ ul{
     color: #fff;
 }
 
-
 .team-icon{
    
     width: 20px;
@@ -584,8 +622,6 @@ ul{
 
 /* portfolio main */
 
-
-
 .portfolio-nav{
     list-style: none;
     display: flex;
@@ -628,12 +664,12 @@ ul{
 }
 
 .portfolio-list .item{
-    width: 370px;
-
-    
+    position: relative;
+    /* width: 370px; */
 }
 
 .portfolio-list .item:hover{
+
 box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
@@ -663,6 +699,47 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1p
     display: block;
 }
 
+/* portfolio position */
 
+.portfolio-thumb{
+    position: relative;
+}
 
+.thumb-d{
+    position: absolute;
+    
+    top: 0;
+    left: 0;
+    transition: 500ms;
 
+    margin: 63px 24px;
+
+    font-family: inherit;
+    font-size: 18px;
+    line-height:1.5;
+    letter-spacing: 0.03em;
+    color: #fff;
+
+    opacity: 0;
+}
+
+.portfolio-thumb::before{
+    content: '';
+    position: absolute;
+    background-image: linear-gradient(to right,
+    rgba(33, 150, 243, 0.9),
+    rgba(33, 150, 243, 0.9));
+
+    width: 100%;
+    height: 100%;
+
+    opacity: 0;
+
+    transition: 500ms;
+
+}
+
+.portfolio-list>.item:hover .portfolio-thumb::before,
+.portfolio-list>.item:hover .thumb-d{
+    opacity: 1;
+}
