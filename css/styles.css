@@ -4,7 +4,8 @@
     --nav-text-color:#2196F3;
     --primary-bg-color: #fff; 
     --footer-text-color: rgba(255, 255, 255, 0.6);
-    
+    --transition-duration: 250ms;
+    --transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -22,6 +23,11 @@ h1,h2,h3,h4,h5,h6,p{
 
 ul{
     list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
 }
 
 .list-none{
@@ -88,14 +94,12 @@ ul{
 .header-logo {
     color: var(--title-text-color);
     font-family: 'Raleway', sans-serif;
-    
     font-size: 26px;
     line-height: 1.2;
-
     text-decoration: none;
-
     margin-right: 92px;
 
+    
 }
 
 .header-accent {
@@ -116,6 +120,10 @@ ul{
     letter-spacing: var(--header-spacing);
 
     text-decoration: none;
+
+    transition-property: color;
+    transition-duration: var(--transition-duration);
+    transition-timing-function: var(--transition-timing-function);
 }
 
 .header-link{
@@ -123,8 +131,24 @@ ul{
 }
 
 .header-link.current{
+    position: relative;
     color: var(--nav-text-color);
 }
+
+.current::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 100%;
+
+    background-color:#2196F3;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+
+    margin-top: 28px;
+}
+
 
 .header-list .header-link:hover,
 .header-list .header-link:focus{
@@ -138,27 +162,26 @@ ul{
     gap: 50px;
 }
 
-.contacts-link{
-    display: flex;
-    align-items: center;
-    
-    
-}
 
 .contacts-icon{
     margin-right: 10px;
     fill:currentColor
 }
 
-.contacts-link {
-    color: inherit;
+.contacts-link { 
+    display: flex;
+    align-items: center;
 
+    color: inherit;
     font-weight: var(--header-font-weight);
     font-size: var(--header-font-size);
     line-height: var(--header-line-height);
     letter-spacing: var(--header-spacing);
-
     text-decoration: none;
+
+    transition-property: color;
+    transition-duration: var(--transition-duration);
+    transition-timing-function: var(--transition-timing-function);
     
 }
 
@@ -234,6 +257,7 @@ ul{
     padding-bottom: 0;
 
 }
+
 .list-title{
     color: #FFFFFF;
     font-size: 14px;
@@ -257,6 +281,8 @@ ul{
     height: 44px;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
+
+    transition: background-color var(--transition-duration) var(--transition-timing-function);
 }
 
 .footer-icon{
@@ -331,11 +357,13 @@ ul{
     left: 692px;
     top: 430px;
 
+    transition: background-color var(--transition-duration) var(--transition-timing-function);
+
 }
 
 .main-btn:hover, 
 .main-btn:focus{
-    background: #188CE8;
+    background-color: #188CE8;
 }
 
 /* main modal */
@@ -559,7 +587,10 @@ ul{
     width: 44px;
     height: 44px;
     border-radius: 50%;
-}
+
+    transition: color var(--transition-duration) var(--transition-timing-function), background-color var(--transition-duration) var(--transition-timing-function);
+} 
+
 .team-link:hover, .team-link:focus{
     background-color: #188CE8;
     color: #fff;
@@ -592,12 +623,6 @@ ul{
     gap: 30px;
 }
 
-.clients-link:hover, .clients-link:focus{
-    color: var(--nav-text-color);
-    border-color: var(--nav-text-color);
-    fill: var(--nav-text-color);
-}
-
 .clients-link{
     color: var(--primary-text-color);
     border: 1px solid #AFB1B8;
@@ -610,7 +635,15 @@ ul{
     align-items: center;
     justify-content: center;
 
+    transition: color var(--transition-duration) var(--transition-timing-function), border-color var(--transition-duration) var(--transition-timing-function);
+}
 
+.clients-link:hover, .clients-link:focus{
+    
+
+    color: var(--nav-text-color);
+    border-color: var(--nav-text-color);
+    /* fill: var(--nav-text-color); */
 }
 
 .clients-icon{
@@ -633,25 +666,24 @@ ul{
 .portfolio-btn{
     color: var(--title-text-color);
     background: #F5F4FA;
-
     font-family: inherit;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.6;
     letter-spacing: 0.03em; 
-    cursor: pointer;
-
     border-radius: 4px;
     border: 1px solid transparent;
 
     padding: 6px 22px;
+    cursor: pointer;
     
+    transition: color var(--transition-duration) var(--transition-timing-function), background-color var(--transition-duration) var(--transition-timing-function), box-shadow var(--transition-duration) var(--transition-timing-function);
 }
 
 .portfolio-btn:focus,
 .portfolio-btn:hover{
     color: #FFFFFF;
-    background: #2196F3;
+    background-color: #2196F3;
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
@@ -664,13 +696,12 @@ ul{
 }
 
 .portfolio-list .item{
-    position: relative;
-    /* width: 370px; */
+   transition: box-shadow var(--transition-duration) var(--transition-timing-function) ; 
 }
 
 .portfolio-list .item:hover{
-
-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .list-descr{
@@ -703,43 +734,44 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1p
 
 .portfolio-thumb{
     position: relative;
+    width: 370px;
+    height: 294px;
+
+    overflow: hidden;
+    
 }
 
-.thumb-d{
+.portfolio-overlay{
     position: absolute;
-    
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 100%;
+    background-color: rgba(33, 150, 243, 0.9);
+
+    transform: translatey(+101%);
+
+    transition: transform var(--transition-duration) var(--transition-timing-function);
+}
+
+.portfolio-list>.item:hover .portfolio-overlay, .portfolio-list>.item>a:focus .portfolio-overlay {
+    transform: translatey(0);
+
+}   
+
+.overlay-text{
+    position: absolute;
     top: 0;
     left: 0;
-    transition: 500ms;
 
     margin: 63px 24px;
 
     font-family: inherit;
     font-size: 18px;
-    line-height:1.5;
+    line-height: 1.5;
     letter-spacing: 0.03em;
     color: #fff;
 
-    opacity: 0;
-}
-
-.portfolio-thumb::before{
-    content: '';
-    position: absolute;
-    background-image: linear-gradient(to right,
-    rgba(33, 150, 243, 0.9),
-    rgba(33, 150, 243, 0.9));
-
-    width: 100%;
-    height: 100%;
-
-    opacity: 0;
-
-    transition: 500ms;
-
-}
-
-.portfolio-list>.item:hover .portfolio-thumb::before,
-.portfolio-list>.item:hover .thumb-d{
-    opacity: 1;
 }
