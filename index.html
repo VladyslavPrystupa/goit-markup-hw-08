@@ -18,8 +18,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/main.min.css" />
+    <!-- <link rel="stylesheet" href="./css/styles.css" /> -->
   </head>
   <body>
     <header class="header">
@@ -28,7 +28,7 @@
           <span lang="en"> <span class="logo__accent">Web</span>Studio </span>
         </a>
         <nav class="nav">
-          <ul class="nav__list list-none">
+          <ul class="list nav__list">
             <li>
               <a class="nav__link nav__link--current" href="./index.html"
                 >Студія
@@ -41,7 +41,7 @@
           </ul>
         </nav>
 
-        <ul class="contacts header__contacts list-none">
+        <ul class="contacts header__contacts">
           <li>
             <a class="contacts__link" href="mailto:info@devstudio.com">
               <svg
@@ -56,7 +56,11 @@
           </li>
           <li>
             <a class="contacts__link" href="tel:+380961111111">
-              <svg class="contacts__icon" width="10px" height="16px">
+              <svg
+                class="contacts__icon contacts__icon--start"
+                width="10px"
+                height="16px"
+              >
                 <use href="./images/icons.svg#smartphone"></use>
               </svg>
               +38 096 111 11 11</a
@@ -69,9 +73,7 @@
     <main>
       <section class="main">
         <div class="container">
-          <h1 class="main__title list-none">
-            Ефективні рішення для вашого бізнесу
-          </h1>
+          <h1 class="main__title">Ефективні рішення для вашого бізнесу</h1>
 
           <button data-modal-open class="btn main__btn" type="button">
             Замовити послугу
@@ -82,7 +84,7 @@
       <section class="features section">
         <h2 class="features__title hide">Особливості</h2>
         <div class="container">
-          <ul class="list list-none">
+          <ul class="list">
             <li class="features__item">
               <div class="features__icon">
                 <svg class="features__svg">
@@ -151,9 +153,9 @@
       </section>
 
       <section class="service section">
-        <h2 class="service__title">Чим ми займаємося</h2>
+        <h2 class="title service__title">Чим ми займаємося</h2>
         <div class="container">
-          <ul class="list list-none">
+          <ul class="list">
             <li>
               <div class="thumb">
                 <img
@@ -200,9 +202,9 @@
       </section>
 
       <section class="team section">
-        <h2 class="team__title">Наша команда</h2>
+        <h2 class="title team__title">Наша команда</h2>
         <div class="container">
-          <ul class="list list-none">
+          <ul class="list">
             <li class="team__item">
               <img
                 src="./images/teamcard1.jpg"
@@ -514,13 +516,13 @@
         </div>
       </section>
 
-      <section class="section clients">
+      <section class="clients section">
         <div class="container">
-          <h2 class="clients-title">Постійні клієнти</h2>
-          <ul class="clients-list list-none">
-            <li class="item">
-              <a href="" class="clients-link"
-                ><svg class="clients-icon" viewBox="0 0 41 47">
+          <h2 class="title clients__title">Постійні клієнти</h2>
+          <ul class="list">
+            <li>
+              <a href="" class="clients__link"
+                ><svg class="clients__icon" viewBox="0 0 41 47">
                   <use
                     href="./images/icons.svg#client1"
                     width="41"
@@ -529,9 +531,9 @@
                 </svg>
               </a>
             </li>
-            <li class="item">
-              <a href="" class="clients-link">
-                <svg class="clients-icon" viewBox="0 0 40 52">
+            <li>
+              <a href="" class="clients__link">
+                <svg class="clients__icon" viewBox="0 0 40 52">
                   <use
                     href="./images/icons.svg#client2"
                     width="40"
@@ -540,9 +542,9 @@
                 </svg>
               </a>
             </li>
-            <li class="item">
-              <a href="" class="clients-link"
-                ><svg class="clients-icon" viewBox="0 0 43 41">
+            <li>
+              <a href="" class="clients__link"
+                ><svg class="clients__icon" viewBox="0 0 43 41">
                   <use
                     href="./images/icons.svg#client3"
                     width="43"
@@ -551,9 +553,9 @@
                 </svg>
               </a>
             </li>
-            <li class="item">
-              <a href="" class="clients-link"
-                ><svg class="clients-icon" viewBox="0 0 84 41">
+            <li>
+              <a href="" class="clients__link"
+                ><svg class="clients__icon" viewBox="0 0 84 41">
                   <use
                     href="./images/icons.svg#client4"
                     width="84"
@@ -562,9 +564,9 @@
                 </svg>
               </a>
             </li>
-            <li class="item">
-              <a href="" class="clients-link">
-                <svg class="clients-icon" viewBox="0 0 63 45">
+            <li>
+              <a href="" class="clients__link">
+                <svg class="clients__icon" viewBox="0 0 63 45">
                   <use
                     href="./images/icons.svg#client5"
                     width="63"
@@ -573,9 +575,9 @@
                 </svg>
               </a>
             </li>
-            <li class="item">
-              <a class="clients-link" href="">
-                <svg class="clients-icon" viewBox="0 0 94 44">
+            <li>
+              <a class="clients__link" href="">
+                <svg class="clients__icon" viewBox="0 0 94 44">
                   <use
                     href="./images/icons.svg#client6"
                     width="94"
@@ -590,31 +592,31 @@
     </main>
 
     <footer class="footer">
-      <div class="footer container">
-        <div class="footer-nav">
-          <a class="footer-logo" href="./index.html">
-            <span lang="en">
-              <span class="footer-accent">Web</span>Studio
-            </span>
+      <div class="container footer__container">
+        <div>
+          <a class="logo footer__logo" href="./index.html">
+            <span lang="en"> <span class="logo__accent">Web</span>Studio </span>
           </a>
-          <address class="footer-address">
-            <ul class="footer-list list-none">
-              <li class="item">
-                <a
-                  class="footer-link"
-                  href="https://goo.gl/maps/LprtmbSoQCrokkiRA"
-                  target="_blank"
-                  rel="noopener nofollow noreffer"
-                  >м. Київ, пр-т Лесі Українки, 26</a
-                >
+          <address>
+            <ul class="list footer__list">
+              <li>
+                <address>
+                  <a
+                    class="footer__adress"
+                    href="https://goo.gl/maps/LprtmbSoQCrokkiRA"
+                    target="_blank"
+                    rel="noopener nofollow noreffer"
+                    >м. Київ, пр-т Лесі Українки, 26</a
+                  >
+                </address>
               </li>
-              <li class="item">
-                <a class="footer-adress" href="mailto:info@devstudio.com"
+              <li>
+                <a class="footer__contacts" href="mailto:info@devstudio.com"
                   >info@devstudio.com</a
                 >
               </li>
-              <li class="item">
-                <a class="footer-adress" href="tel:+380961111111"
+              <li>
+                <a class="footer__contacts" href="tel:+380961111111"
                   >+38 096 111 11 11</a
                 >
               </li>
@@ -622,16 +624,16 @@
           </address>
         </div>
 
-        <div class="footer-links">
-          <h2 class="list-title">Приєднуйтесь</h2>
-          <ul class="footer-list-icon list-none">
-            <li class="foter-icon-item">
+        <div>
+          <h2 class="footer__title">Приєднуйтесь</h2>
+          <ul class="list icon-list">
+            <li class="icon-list__item">
               <a
-                class="foot-link"
+                class="icon-list__link icon-list__link--footer-color"
                 href="https://www.instagram.com/"
                 target="_blank"
                 rel="noopener nofollow noreffer"
-                ><svg class="footer-icon">
+                ><svg class="icon-list__svg">
                   <use
                     href="./images/icons.svg#instagram"
                     width="20"
@@ -640,13 +642,13 @@
                 </svg>
               </a>
             </li>
-            <li class="footer-icon-item">
+            <li class="">
               <a
-                class="foot-link"
+                class="icon-list__link icon-list__link--footer-color"
                 href="https://twitter.com/"
                 target="_blank"
                 rel="noopener nofollow noreffer"
-                ><svg class="footer-icon">
+                ><svg class="icon-list__svg">
                   <use
                     href="./images/icons.svg#twitter"
                     width="20"
@@ -655,13 +657,13 @@
                 </svg>
               </a>
             </li>
-            <li class="footer-icon-item">
+            <li class="">
               <a
-                class="foot-link"
+                class="icon-list__link icon-list__link--footer-color"
                 href="https://facebook.com/"
                 target="_blank"
                 rel="noopener nofollow noreffer"
-                ><svg class="footer-icon">
+                ><svg class="icon-list__svg">
                   <use
                     href="./images/icons.svg#facebook"
                     width="20"
@@ -670,13 +672,13 @@
                 </svg>
               </a>
             </li>
-            <li class="footer-icon-item">
+            <li class="">
               <a
-                class="foot-link"
+                class="icon-list__link icon-list__link--footer-color"
                 href="https://www.linkedin.com/"
                 target="_blank"
                 rel="noopener nofollow noreffer"
-                ><svg class="footer-icon">
+                ><svg class="icon-list__svg">
                   <use
                     href="./images/icons.svg#linkedin"
                     width="20"
@@ -688,18 +690,18 @@
           </ul>
         </div>
 
-        <div class="footer-sub">
-          <h2 class="footer-sub-title">Підпишіться на розсилку</h2>
-          <form class="footer-form">
+        <div class="footer__sub">
+          <h2 class="footer__title">Підпишіться на розсилку</h2>
+          <form class="form footer__form">
             <input
-              class="footer-input"
+              class="footer__input"
               type="email"
               name="email"
               placeholder="E-mail"
             />
-            <button type="submit" class="btn footer-submit">
+            <button type="submit" class="btn footer__btn">
               Підписатися
-              <svg class="submit-icon">
+              <svg class="footer__icon">
                 <use
                   href="./images/icons.svg#iconsend"
                   width="24"
@@ -714,72 +716,74 @@
 
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <button data-modal-close class="modal-btn-close list-none">
-          <svg class="modal-close-icon">
+        <button data-modal-close class="btn modal__btn--close">
+          <svg class="modal__btn-icon">
             <use href="./images/icons.svg#close" width="11" height="11"></use>
           </svg>
         </button>
 
-        <div class="form-comtainer">
-          <h2 class="form-title">Залиште свої дані, ми вам передзвонимо</h2>
+        <div class="form modal__form">
+          <h2 class="form__title">Залиште свої дані, ми вам передзвонимо</h2>
 
-          <form class="modal-form" name="signup_form">
-            <label class="modal-l">
-              <span class="modal-t">Ім'я</span>
-              <span class="modal-center">
-                <input class="modal-i name" type="text" name="user-name" />
-                <svg class="input-i">
+          <form name="signup_form">
+            <label class="form__label">
+              <span class="form__text">Ім'я</span>
+              <span class="form__center">
+                <input class="form__input" type="text" name="user-name" />
+                <svg class="form__icon">
                   <use href="./images/icons.svg#manmodal"></use>
                 </svg>
               </span>
             </label>
 
-            <label class="modal-l">
-              <span class="modal-t">Телефон</span>
-              <span class="modal-center">
-                <input class="modal-i" type="tel" name="phone-number" />
-                <svg class="input-i">
+            <label class="form__label">
+              <span class="form__text">Телефон</span>
+              <span class="form__center">
+                <input class="form__input" type="tel" name="phone-number" />
+                <svg class="form__icon">
                   <use href="./images/icons.svg#phonemodal"></use>
                 </svg>
               </span>
             </label>
 
-            <label class="modal-l">
-              <span class="modal-t">Пошта</span>
+            <label class="form__label">
+              <span class="form__text">Пошта</span>
 
-              <span class="modal-center">
-                <input class="modal-i" type="email" name="email" />
-                <svg class="input-i">
+              <span class="form__center">
+                <input class="form__input" type="email" name="email" />
+                <svg class="form__icon">
                   <use href="./images/icons.svg#mailmodal"></use>
                 </svg>
               </span>
             </label>
 
-            <label class="modal-l">
-              <span class="modal-t">Коментар</span>
+            <label class="form__label">
+              <span class="form__text">Коментар</span>
               <textarea
-                class="modal-textarea"
+                class="form__textarea"
                 name="coment"
                 rows="6"
                 placeholder="Введіть текст"
               ></textarea>
             </label>
 
-            <label class="modal-check">
+            <label class="custom__check">
               <input
-                class="custom-input hide"
+                class="custom__input hide"
                 type="checkbox"
                 name="conditions"
                 value="confirm"
               />
-              <span class="agree-icon"></span>
-              <span class="check-text"
+              <span class="custom__icon"></span>
+              <span class="custom__text"
                 >Погоджуюся з розсилкою та приймаю
-                <a href="" class="check-link">Умови договору</a></span
+                <a href="" class="custom__link">Умови договору</a></span
               >
             </label>
 
-            <button class="modal-btn-submit" type="submit">Відправити</button>
+            <button class="btn modal__btn--submit" type="submit">
+              Відправити
+            </button>
           </form>
         </div>
       </div>

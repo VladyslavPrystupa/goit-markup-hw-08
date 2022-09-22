@@ -1,0 +1,27 @@
+.product__thumb {
+
+    overflow: hidden;
+
+}
+
+.product__descr {
+    border: 1px solid #EEEEEE;
+    border-top: none;
+    padding: 20px 24px;
+}
+
+.product__subtitle {
+    color: var(--title-text-color);
+
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+
+    margin-bottom: 4px;
+}
+
+.product__text {
+    line-height: 1.9;
+    letter-spacing: 0.03em;
+
+}

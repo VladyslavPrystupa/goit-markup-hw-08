@@ -1,0 +1,29 @@
+.service {
+    padding-top: 0;
+}
+
+.service__title {
+    margin-bottom: 50px;
+}
+
+.service__text {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+
+    background-color: rgba(47, 48, 58, 0.8);
+    width: 100%;
+    height: 70px;
+    padding: 27px 0;
+}
+
+.service__dscr {
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.4;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}

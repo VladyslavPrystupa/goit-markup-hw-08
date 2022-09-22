@@ -1,0 +1,26 @@
+.header {
+    background-color: #FFFFFF;
+    --header-font-size: 14px;
+    --header-font-weight: 500;
+    --header-line-height: 1.14;
+    --header-spacing: 0.02em;
+
+    padding-top: 25px;
+    padding-bottom: 25px;
+
+    border-bottom: 1px solid #EEEEEE;
+
+}
+
+.header__container {
+    display: flex;
+    align-items: center;
+}
+
+.header__logo {
+    margin-right: 92px;
+}
+
+.header__contacts {
+    margin-left: auto;
+}
