@@ -1,7 +1,11 @@
 .portfolio__btn-list {
-    justify-content: center;
-    margin-bottom: 50px;
+    justify-content: start;
+    margin-bottom: 40px;
     gap: 8px;
+
+    @media screen and(min-width:768px) {
+        justify-content: center;
+    }
 }
 
 .portfolio__btn {
@@ -11,7 +15,7 @@
     font-size: 16px;
     line-height: 1.6;
     letter-spacing: 0.03em;
-
+    
     padding: 6px 22px;
 
     transition: color var(--transition-duration) var(--transition-timing-function), background-color var(--transition-duration) var(--transition-timing-function), box-shadow var(--transition-duration) var(--transition-timing-function);

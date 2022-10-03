@@ -1,6 +1,9 @@
-.clients__title {
-    margin-bottom: 50px;
+.clients__list{
+    @media screen and (min-width:1200px) {
+        flex-wrap: nowrap;
+    }
 }
+
 
 .clients__link {
     color: var(--primary-text-color);

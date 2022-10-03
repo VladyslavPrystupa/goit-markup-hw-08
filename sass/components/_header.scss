@@ -1,26 +1,114 @@
 .header {
+   
     background-color: #FFFFFF;
     --header-font-size: 14px;
     --header-font-weight: 500;
     --header-line-height: 1.14;
     --header-spacing: 0.02em;
 
-    padding-top: 25px;
-    padding-bottom: 25px;
+    padding-top: 16px;
+    padding-bottom: 16px;
 
     border-bottom: 1px solid #EEEEEE;
+
+    @media screen and(min-width: 768px) {
+        padding-top: 21px;
+        padding-bottom: 21px;
+    }
+
+    @media screen and(min-width: 1200px) {
+     padding-top: 26px;
+    padding-bottom: 26px;    
+}
 
 }
 
 .header__container {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .header__logo {
-    margin-right: 92px;
+
+    margin-right: auto;
+
+    @media screen and(min-width: 768px) {
+        margin-right: 87px;
+
+    }
+    
+    @media screen and(min-width: 1200px) {
+        margin-right: 92px;
+    }
+    
+}
+
+.menu-toggle{
+    background-color: #fff;
+    border: none;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+
+    transition: fill var(--transition-duration) var(--transition-timing-function);
+
+    &:hover,
+    &:focus {
+        fill: var(--nav-text-color);
+    }
+
+    @media screen and(min-width:768px) {
+        display: none;
+    }
+}
+
+.menu-toggle--close{
+    position: fixed;
+    top: 10px;
+    right: 15px;
+
+
+}
+
+.header__icon{
+    width: 40px;
+    height: 40px;
 }
 
 .header__contacts {
-    margin-left: auto;
+    
+    @media screen and(min-width: 1200px) {
+          
+ }
+}
+
+.menu-container{
+
+    @media screen  and(max-width:480px) {
+        position: fixed;
+        display: flex;
+        flex-direction: column;;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #fff;
+        padding: 48px 40px;
+        transform: translateX(100%);
+        overflow-y: scroll;
+    }
+   
+
+    @media screen and(min-width:768px) {
+    display: flex;
+    align-items: center;
+    }
+    
+    
+    
+}
+
+.menu-container.is-open{
+    transform: translateX(0);
 }

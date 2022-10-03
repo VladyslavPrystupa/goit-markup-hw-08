@@ -1,0 +1,33 @@
+.social-list {
+    display: flex;
+    justify-content: start;
+    gap: 20px;
+   
+    @media screen and(min-width:768px) {
+    display: none;
+    }
+    
+    
+}
+
+.social-list__link {
+    position: relative;
+   font-size: 18px;
+   line-height: calc(22 / 18);
+   font-weight: var(--header-font-weight);
+   letter-spacing: var(--header-spacing);
+   color: var(--nav-text-color);
+
+&::after {
+    content: '';
+    position: absolute;
+    right: -10px;
+    top: 0;
+    background-color: #757575;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+   
+    height: 100%;
+    
+}
+
+}

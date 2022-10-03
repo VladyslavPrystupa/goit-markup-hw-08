@@ -1,22 +1,55 @@
 .main {
-    height: 600px;
+    // height: 600px;
+    
     max-width: 1600px;
     margin-left: auto;
     margin-right: auto;
-
-    background-image: linear-gradient(to right,
-            rgba(47, 48, 58, 0.4),
-            rgba(47, 48, 58, 0.4)),
-        url(../images/mainbg.jpg);
 
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 
-    padding-top: 200px;
-    padding-bottom: 200px;
+    padding-top: 116px;
+    padding-bottom: 116px;
 
     text-align: center;
+
+    // Mobile screen
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/main_bg_s@1x.jpg);
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+            url(../images/main_bg_s@2x.jpg);
+    }
+
+    // Tablet screen
+    @media screen and (min-width: 481px) {
+        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+            url(../images/main_bg_m@1x.jpg);
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+                url(../images/main_bg_m@2x.jpg);
+        }
+    }
+
+    // Desktop screen
+    @media screen and (min-width: 769px) {
+        height: 600px;
+        padding: 200px 0;
+        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+            url(../images/main_bg_l@1x.jpg);
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+                url(../images/main_bg_l@2x.jpg);
+        }
+    }
 
 }
 
@@ -24,21 +57,29 @@
     color: #FFFFFF;
 
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.4;
+    font-size: 26px;
+    line-height: calc(42 / 26);
     letter-spacing: 0.06em;
     text-transform: uppercase;
 
     margin: 0 auto;
     margin-bottom: 30px;
 
-    width: 670px;
+    @media screen and(min-width:768px) {
+        width: 360px;
+    }
 
+    @media screen and(min-width:1200px) {
+        width: 696px;
+        font-size: 44px;
+        line-height: calc(60 / 44);
+    }
 }
 
 .main__btn {
-    min-width: 216px;
-    padding: 10px 32px;
+    min-width: 200px;
+    margin-right: auto;
+    margin-left: auto;
 
     &:hover,
     &:focus {

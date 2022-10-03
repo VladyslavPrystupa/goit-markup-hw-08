@@ -27,46 +27,96 @@
         <a class="logo header__logo" href="./index.html">
           <span lang="en"> <span class="logo__accent">Web</span>Studio </span>
         </a>
-        <nav class="nav">
-          <ul class="list nav__list">
-            <li>
-              <a class="nav__link" href="./index.html">Студія </a>
-            </li>
-            <li>
-              <a class="nav__link nav__link--current" href="./portfolio.html"
-                >Портфоліо</a
-              >
-            </li>
-            <li><a class="nav__link" href="">Контакти</a></li>
-          </ul>
-        </nav>
 
-        <ul class="contacts header__contacts">
-          <li>
-            <a class="contacts__link" href="mailto:info@devstudio.com">
-              <svg
-                class="contacts__icon contacts__icon--start"
-                width="16px"
-                height="12px"
+        <button
+          type="button"
+          class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg class="header__icon">
+            <use href="./images/icons.svg#menu_open"></use>
+          </svg>
+        </button>
+
+        <div class="menu-container js-menu-container">
+          <button
+            type="button"
+            class="menu-toggle js-close-menu menu-toggle--close"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg class="header__icon">
+              <use href="./images/icons.svg#menu_close"></use>
+            </svg>
+          </button>
+          <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a class="nav__link" href="./index.html">Студія </a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link nav__link--current" href="./portfolio.html"
+                  >Портфоліо</a
+                >
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="">Контакти</a>
+              </li>
+            </ul>
+          </nav>
+
+          <ul class="contacts header__contacts">
+            <li>
+              <a
+                class="contacts__link contacts__link--size"
+                href="mailto:info@devstudio.com"
               >
-                <use href="./images/icons.svg#envelope"></use>
-              </svg>
-              info@devstudio.com
-            </a>
-          </li>
-          <li>
-            <a class="contacts__link" href="tel:+380961111111">
-              <svg
-                class="contacts__icon contacts__icon--start"
-                width="10px"
-                height="16px"
+                <svg
+                  class="contacts__icon contacts__icon--start"
+                  width="16px"
+                  height="12px"
+                >
+                  <use href="./images/icons.svg#envelope"></use>
+                </svg>
+                info@devstudio.com
+              </a>
+            </li>
+            <li>
+              <a
+                class="contacts__link contacts__link--nav-color"
+                href="tel:+380961111111"
               >
-                <use href="./images/icons.svg#smartphone"></use>
-              </svg>
-              +38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+                <svg
+                  class="contacts__icon contacts__icon--start"
+                  width="10px"
+                  height="16px"
+                >
+                  <use href="./images/icons.svg#smartphone"></use>
+                </svg>
+                +38 096 111 11 11</a
+              >
+            </li>
+          </ul>
+
+          <ul class="social-list">
+            <li class="social-list__item">
+              <a href="" class="social-list__link">Instagram</a>
+            </li>
+
+            <li class="social-list__item">
+              <a href="" class="social-list__link">Twitter</a>
+            </li>
+
+            <li class="social-list__item">
+              <a href="" class="social-list__link">Facebook</a>
+            </li>
+
+            <li class="social-list__item">
+              <a href="" class="social-list__link">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
 
@@ -100,13 +150,64 @@
             <li class="grid__item">
               <a class="product">
                 <div class="thumb product__thumb">
-                  <img
-                    class="product__img"
-                    src="./images/laptop.jpg"
-                    alt="ноутбук"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <!-- Desktop screen -->
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/port1_l@1x.webp 1x,
+                        ./images/port1_l@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/port1_l@1x.jpg 1x,
+                        ./images/port1_l@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- Tablet screen -->
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/port1_m@1x.webp 1x,
+                        ./images/port1_m@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/port1_m@1x.jpg 1x,
+                        ./images/port1_m@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- Mobile screen -->
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/port1_s@1x.webp 1x,
+                        ./images/port1_s@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/port1_s@1x.jpg 1x,
+                        ./images/port1_s@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      class="card-img"
+                      src="./images/port1_s@1x.jpg"
+                      alt="Ноутбук"
+                    />
+                  </picture>
                   <div class="overlay">
                     <p class="overlay__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -126,13 +227,66 @@
             <li class="grid__item">
               <a class="product">
                 <div class="thumb product__thumb">
-                  <img
-                    class="product__img"
-                    src="./images/neworlean.jpg"
-                    alt="постер баскетбольного матчу"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <!-- Desktop screen -->
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/port2_l@1x.webp 1x,
+                        ./images/port2_l@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/port2_l@1x.jpg 1x,
+                        ./images/port2_l@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- Tablet screen -->
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/port2_m@1x.webp 1x,
+                        ./images/port2_m@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/port2_m@1x.jpg 1x,
+                        ./images/port2_m@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- Mobile screen -->
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/port2_s@1x.webp 1x,
+                        ./images/port2_s@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/port2_s@1x.jpg 1x,
+                        ./images/port2_s@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      class="card-img"
+                      src="./images/port2_s@1x.jpg"
+                      alt="постер
+                  баскетбольного матчу"
+                    />
+                  </picture>
+
                   <div class="overlay">
                     <p class="overlay__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -153,13 +307,66 @@
             <li class="grid__item">
               <a class="product">
                 <div class="thumb product__thumb">
-                  <img
-                    class="product__img"
-                    src="./images/seafood.jpg"
-                    alt="лого ресторану"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <!-- Desktop screen -->
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/port3_l@1x.webp 1x,
+                        ./images/port3_l@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/port3_l@1x.jpg 1x,
+                        ./images/port3_l@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- Tablet screen -->
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/port3_m@1x.webp 1x,
+                        ./images/port3_m@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/port3_m@1x.jpg 1x,
+                        ./images/port3_m@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- Mobile screen -->
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/port3_s@1x.webp 1x,
+                        ./images/port3_s@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/port3_s@1x.jpg 1x,
+                        ./images/port3_s@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      class="card-img"
+                      src="./images/port3_s@1x.jpg"
+                      alt="лого
+                  ресторану"
+                    />
+                  </picture>
+
                   <div class="overlay">
                     <p class="overlay__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -180,13 +387,68 @@
             <li class="grid__item">
               <a class="product">
                 <div class="thumb product__thumb">
-                  <img
-                    class="product__img"
-                    src="./images/prime.jpg"
-                    alt="навушники"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <!-- Desktop screen -->
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/port4_l@1x.webp 1x,
+                        ./images/port4_l@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/port4_l@1x.jpg 1x,
+                        ./images/port4_l@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- Tablet screen -->
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/port4_m@1x.webp 1x,
+                        ./images/port4_m@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/port4_m@1x.jpg 1x,
+                        ./images/port4_m@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- Mobile screen -->
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/port4_s@1x.webp 1x,
+                        ./images/port4_s@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/port4_s@1x.jpg 1x,
+                        ./images/port4_s@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      class="card-img"
+                      src="./images/port4_s@1x.jpg"
+                      alt="навушники"
+                    />
+                  </picture>
+
+                  <!-- <img
+                  class="product__img" src="./images/prime.jpg" 
+                  width="370" height="294" /> -->
                   <div class="overlay">
                     <p class="overlay__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -207,13 +469,65 @@
             <li class="grid__item">
               <a class="product">
                 <div class="thumb product__thumb">
-                  <img
-                    class="product__img"
-                    src="./images/boxes.jpg"
-                    alt="коробки"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <!-- Desktop screen -->
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/port5_l@1x.webp 1x,
+                        ./images/port5_l@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/port5_l@1x.jpg 1x,
+                        ./images/port5_l@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- Tablet screen -->
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/port5_m@1x.webp 1x,
+                        ./images/port5_m@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/port5_m@1x.jpg 1x,
+                        ./images/port5_m@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- Mobile screen -->
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/port5_s@1x.webp 1x,
+                        ./images/port5_s@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/port5_s@1x.jpg 1x,
+                        ./images/port5_s@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      class="card-img"
+                      src="./images/port5_s@1x.jpg"
+                      alt="коробки"
+                    />
+                  </picture>
+
                   <div class="overlay">
                     <p class="overlay__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -234,13 +548,64 @@
             <li class="grid__item">
               <a class="product">
                 <div class="thumb product__thumb">
-                  <img
-                    class="product__img"
-                    src="./images/inspiration.jpg"
-                    alt="монітор"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <!-- Desktop screen -->
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/port6_l@1x.webp 1x,
+                        ./images/port6_l@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/port6_l@1x.jpg 1x,
+                        ./images/port6_l@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- Tablet screen -->
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/port6_m@1x.webp 1x,
+                        ./images/port6_m@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/port6_m@1x.jpg 1x,
+                        ./images/port6_m@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- Mobile screen -->
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/port6_s@1x.webp 1x,
+                        ./images/port6_s@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/port6_s@1x.jpg 1x,
+                        ./images/port6_s@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      class="card-img"
+                      src="./images/port6_s@1x.jpg"
+                      alt="монітор"
+                    />
+                  </picture>
                   <div class="overlay">
                     <p class="overlay__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -261,13 +626,65 @@
             <li class="grid__item">
               <a class="product">
                 <div class="thumb product__thumb">
-                  <img
-                    class="product__img"
-                    src="./images/limited.jpg"
-                    alt="журнал"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <!-- Desktop screen -->
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/port7_l@1x.webp 1x,
+                        ./images/port7_l@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/port7_l@1x.jpg 1x,
+                        ./images/port7_l@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- Tablet screen -->
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/port7_m@1x.webp 1x,
+                        ./images/port7_m@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/port7_m@1x.jpg 1x,
+                        ./images/port7_m@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- Mobile screen -->
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/port7_s@1x.webp 1x,
+                        ./images/port7_s@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/port7_s@1x.jpg 1x,
+                        ./images/port7_s@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      class="card-img"
+                      src="./images/port7_s@1x.jpg"
+                      alt="журнал"
+                    />
+                  </picture>
+
                   <div class="overlay">
                     <p class="overlay__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -288,13 +705,65 @@
             <li class="grid__item">
               <a class="product"
                 ><div class="thumb product__thumb">
-                  <img
-                    class="product__img"
-                    src="./images/lab.jpg"
-                    alt="бірка"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <!-- Desktop screen -->
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/port8_l@1x.webp 1x,
+                        ./images/port8_l@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/port8_l@1x.jpg 1x,
+                        ./images/port8_l@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- Tablet screen -->
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/port8_m@1x.webp 1x,
+                        ./images/port8_m@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/port8_m@1x.jpg 1x,
+                        ./images/port8_m@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- Mobile screen -->
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/port8_s@1x.webp 1x,
+                        ./images/port8_s@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/port8_s@1x.jpg 1x,
+                        ./images/port8_s@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      class="card-img"
+                      src="./images/port8_s@1x.jpg"
+                      alt="бірка"
+                    />
+                  </picture>
+
                   <div class="overlay">
                     <p class="overlay__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -315,13 +784,65 @@
             <li class="grid__item">
               <a class="product"
                 ><div class="thumb product__thumb">
-                  <img
-                    class="product__img"
-                    src="./images/growing.jpg"
-                    alt="ноутбук"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <!-- Desktop screen -->
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/port9_l@1x.webp 1x,
+                        ./images/port9_l@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/port9_l@1x.jpg 1x,
+                        ./images/port9_l@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- Tablet screen -->
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/port9_m@1x.webp 1x,
+                        ./images/port9_m@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/port9_m@1x.jpg 1x,
+                        ./images/port9_m@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- Mobile screen -->
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/port9_s@1x.webp 1x,
+                        ./images/port9_s@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/port9_s@1x.jpg 1x,
+                        ./images/port9_s@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      class="card-img"
+                      src="./images/port9_s@1x.jpg"
+                      alt="ноутбук"
+                    />
+                  </picture>
+
                   <div class="overlay">
                     <p class="overlay__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -343,7 +864,7 @@
 
     <footer class="footer">
       <div class="container footer__container">
-        <div>
+        <div class="footer__info">
           <a class="logo footer__logo" href="./index.html">
             <span lang="en"> <span class="logo__accent">Web</span>Studio </span>
           </a>
@@ -374,7 +895,7 @@
           </address>
         </div>
 
-        <div>
+        <div class="footer_social">
           <h2 class="footer__title">Приєднуйтесь</h2>
           <ul class="list icon-list">
             <li class="icon-list__item">
@@ -463,5 +984,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
