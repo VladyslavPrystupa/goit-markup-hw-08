@@ -4,27 +4,45 @@
     }
 }
 
-
-.clients__link {
+.clients__item{
     color: var(--primary-text-color);
     border: 1px solid #AFB1B8;
     border-radius: 4px;
-
-    width: 170px;
-    height: 92px;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    transition: color var(--transition-duration) var(--transition-timing-function), border-color var(--transition-duration) var(--transition-timing-function);
+    width: 210px;
+    height: 92px;
 
+    @media screen and(min-width: 768px) {
+    width: 226px; 
+    }
+
+    @media screen and(min-width: 1200px) {
+        width: 170px;
+    }
+
+    transition: color var(--transition-duration) var(--transition-timing-function), border-color var(--transition-duration) var(--transition-timing-function);
     &:hover,
     &:focus {
         color: var(--nav-text-color);
         border-color: var(--nav-text-color);
     }
+
+    cursor: pointer;
 }
+
+// .clients__link {
+//     transition: color var(--transition-duration) var(--transition-timing-function), border-color var(--transition-duration) var(--transition-timing-function);
+
+//     &:hover,
+//     &:focus {
+//         color: var(--nav-text-color);
+//         border-color: var(--nav-text-color);
+//     }
+// }
 
 .clients__icon {
     fill: currentColor;

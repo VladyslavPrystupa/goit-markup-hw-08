@@ -17,8 +17,8 @@
     }
 
     @media screen and(min-width: 1200px) {
-     padding-top: 26px;
-    padding-bottom: 26px;    
+        padding-top: 26px;
+        padding-bottom: 26px;    
 }
 
 }
@@ -71,7 +71,7 @@
         height: 100vh;
         background-color: #fff;
         padding: 48px 40px;
-        transform: translateX(100%);
+        transform: translatey(-100%);
         overflow-y: scroll;
         
     }
@@ -83,11 +83,12 @@
     }
     
     
-    
+    transition: var(--transition-duration);
 }
 
 .menu-container.is-open{
-    transform: translateX(0);
+    transform: translatey(0);
+   
     
 }
 
