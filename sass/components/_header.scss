@@ -26,7 +26,7 @@
 .header__container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    // justify-content: space-between;
 }
 
 .header__logo {
@@ -51,19 +51,15 @@
     height: 40px;
 }
 
-.header__contacts {
-    
-    @media screen and(min-width: 1200px) {
-          
- }
-}
+
 
 .menu-container{
-    
-    @media screen  and(max-width:480px) {
+    display: flex;
+   
+    @media screen  and(max-width:767px) {
         z-index: 999;
         position: fixed;
-        display: flex;
+        
         flex-direction: column;;
         top: 0;
         left: 0;
@@ -73,17 +69,17 @@
         padding: 48px 40px;
         transform: translatey(-100%);
         overflow-y: scroll;
-        
+        transition: var(--transition-duration);
+    
     }
-   
 
     @media screen and(min-width:768px) {
-    display: flex;
+
     align-items: center;
     }
     
+
     
-    transition: var(--transition-duration);
 }
 
 .menu-container.is-open{
